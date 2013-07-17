@@ -1,17 +1,19 @@
-{ "name": "livereload"
-, "description": "LiveReload server"
+{ "name": "better-livereload"
+, "description": "Better LiveReload Server"
 , "version": "0.3.1"
-, "contributors": [
-    { "name": "Joshua Peek" }
-  , { "name": "Brian P. Hogan", "email": "brianhogan@napcs.com" }
+, "keywords": ["livereload", "server"]
+, "homepage": "https://github.com/Leftium/node-livereload"
+, "bugs": "https://github.com/Leftium/node-livereload/issues"
+, "author": [
+    { "name": "John-Kim Murphy", "email": "john@leftium.com", "url": "http://www.leftium.com/" }
   ]
 , "licenses": [
   { "type": "MIT"
-  , "url": "https://github.com/napcs/node-livereload/blob/master/LICENSE"
+  , "url": "https://github.com/Leftium/node-livereload/blob/master/LICENSE"
   }]
 , "repository":
   { "type": "git"
-  , "url": "http://github.com/napcs/node-livereload.git"
+  , "url": "https://github.com/Leftium/node-livereload.git"
   }
 , "bin": { "livereload": "./bin/livereload.js" }
 , "main": "./lib/livereload.js"

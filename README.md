@@ -1,5 +1,15 @@
-node-livereload
-===============
+better-livereload
+======================
+
+A drop-in replacement for
+[node-livereload](https://npmjs.org/package/node-live-reload).
+The purpose of this fork is two-fold:
+
+ 1. To make the most [recent version](https://npmjs.org/package/better-livereload) accessible from npm
+ 2. To add some performance enhancements
+
+*(Slightly edited and updated) original README starts below ...*
+<hr />
 
 An implementation of the LiveReload server in Node.js. It's an alternative to the graphical [http://livereload.com/](http://livereload.com/) application, which monitors files for changes and reloads your web browser.
 
@@ -9,18 +19,17 @@ First, install the LiveReload browser plugins by visiting [http://help.livereloa
 
 To use livereload from the command line:
 
-    $ npm install -g livereload
+    $ npm install -g better-livereload
     $ livereload [path]
 
-    
 
 Or to use the api within a project:
 
-    $ npm install livereload
+    $ npm install better-livereload
 
 Then, simply create a server and fire it up.
 
-    livereload = require('livereload');
+    livereload = require('better-livereload');
     server = livereload.createServer();
     server.watch(__dirname + "/public");
 
@@ -32,7 +41,7 @@ You can also use this with a Connect server:
       connect.staticProvider(__dirname + "/public")
     ).listen(3000);
 
-    livereload = require('livereload');
+    livereload = require('better-livereload');
     server = livereload.createServer({exts: ['less']});
     server.watch(__dirname + "/public");
 
@@ -47,12 +56,9 @@ The `createServer()` method supports a few basic options, passed as a JavaScript
 * `applyCSSLive` tells LiveReload to reload CSS files in the background instead of refreshing the page. The default for this is `true`.
 * `exclusions` lets you specify files to ignore. By default, this includes `.git/`, `.svn/`, and `.hg/`
 
-# Limitations
-
-Right now this is extremely simple. It relies on polling so there's a delay in refreshing the browser. It could be faster.
-
 # License
 
-Copyright (c) 2010-2012 Joshua Peek and Brian P. Hogan.
+Copyright John-Kim Murphy <br>
+Original copyright (c) 2010-2012 Joshua Peek and Brian P. Hogan.
 
 Released under the MIT license. See `LICENSE` for details.
